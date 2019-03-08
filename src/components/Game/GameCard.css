@@ -1,0 +1,11 @@
+.trumpcard {
+  width: 300px;
+  height: 200px;
+  margin: 25px;
+  cursor: pointer;
+}
+
+.trumpcard:hover {
+  transform: scale(1.05);
+  transition: .1s;
+}
