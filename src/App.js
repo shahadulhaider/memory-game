@@ -12,7 +12,6 @@ class App extends Component {
     guessed: [],
     currentScore: 0,
     topScore: 0,
-    cheat: false,
     instructions: "Click on all twelve cards without any duplicates. Click a card to get started."
   }
 
@@ -77,19 +76,6 @@ class App extends Component {
     this.shuffleCards();
   }
 
-  handleCheatClick = (event) => {
-    if (document.getElementById("cheatbox").checked) {
-      this.setState({
-        cheat: true
-      });
-    } else {
-      this.setState({
-        cheat: false
-      });
-    }
-    console.log(this.state.cheat);
-  }
-
   render() {
     return (
       <div>
@@ -106,13 +92,7 @@ class App extends Component {
           cards={this.state.cards}
           guessed={this.state.guessed}
           handleClick={this.handleClick}
-          cheat={this.state.cheat}
         />
-        <div className="container center">
-          <form>
-            Cheat: <input type="checkbox" id="cheatbox" onClick={this.handleCheatClick} />
-          </form>
-        </div>
       </div>
     );
   }

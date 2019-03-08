@@ -13,7 +13,6 @@ const Game = (props) => {
               handleClick={props.handleClick}
               cardId={card.id}
               guessed={props.guessed}
-              cheat={props.cheat}
               key={card.id}
             >
               <img src={require(`../../../public/images/${card.src}.jpg`)}
